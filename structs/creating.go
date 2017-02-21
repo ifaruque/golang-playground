@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"unsafe"
+)
 
 type struct1 struct {
 	i1 int
@@ -17,6 +20,7 @@ func main() {
 	fmt.Printf("the string is %s\n", ms.str)
 	fmt.Printf("the integer is %d\n", ms.i1)
 	fmt.Printf("the float is %f\n", ms.f1)
+	fmt.Printf("size of staticMS %f\n", unsafe.Sizeof(ms))
 
 	// With shorthand initialization
 
@@ -25,6 +29,7 @@ func main() {
 	fmt.Printf("the string is %s\n", ms2.str)
 	fmt.Printf("the integer is %d\n", ms2.i1)
 	fmt.Printf("the float is %f\n", ms2.f1)
+	fmt.Printf("size of staticMS %f\n", unsafe.Sizeof(ms2))
 
 
 	var staticMS struct1;
@@ -35,4 +40,5 @@ func main() {
 	fmt.Printf("the string is %s\n", staticMS.str)
 	fmt.Printf("the integer is %d\n", staticMS.i1)
 	fmt.Printf("the float is %f\n", staticMS.f1)
+	fmt.Printf("size of staticMS %f\n", unsafe.Sizeof(staticMS))
 }
