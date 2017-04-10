@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func init() {
-	fmt.Println("Calling init function");
+	fmt.Println("Calling init function")
 }
 
 func main() {
@@ -15,6 +15,6 @@ func main() {
 
 
 	for ch, val := range result {
-		fmt.Println(ch + "= ", val);
+		fmt.Println(ch + "= ", val)
 	}
 }
